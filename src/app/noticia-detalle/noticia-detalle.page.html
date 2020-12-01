@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{noticia.titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <p>Por: {{noticia.autor.nombre}} {{noticia.autor.apellido}}</p>
+    <h2>{{noticia.descripcion}}</h2>
+    <h2>{{noticia.contenido}}</h2>
+  </ion-col>
+</ion-row>
+<ion-row class="ion-align-items-center">
+  <ion-col class="ion-text-center">
+    <div>
+      <ion-button 
+      [routerLink]="['/listado-noticias']"
+      (click)="detalles(new)" 
+      color="success">Volver</ion-button>
+    </div>
+  </ion-col>
+</ion-row>
+</ion-content>
